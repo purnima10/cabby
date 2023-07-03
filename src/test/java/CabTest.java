@@ -48,4 +48,13 @@ class CabTest {
         int actualFare = cab.aggregateFare(Rides);
         assertEquals(134,actualFare);
     }
+
+    @Test
+    @DisplayName("Should give fare as 144 for 4 Rides of 5 km & 2 min Wait and 3 km ride and 5 min wait and 2km and 0 min wait and 5 km and 0 wait time") //edit
+    void aggregateFareFor4Rides(){
+        Cab cab= new Cab();
+        int [][] Rides = new int [][]{{5,2},{3,5},{2,0},{5,0}};
+        int actualFare = cab.aggregateFare(Rides);
+        assertEquals(184,actualFare);
+    }
 }
